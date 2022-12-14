@@ -12,10 +12,9 @@ const btnValues = [
     [0, ".", "="],
 ];
 
-const toLocaleString = (num) =>
-    String(num).replace(/(?<!\..*)(\d)(?=(?:\d{3})+(?:\.|$))/g, "$1 ");
+const toLocaleString = (num) =>  String(num).replace(/(?<!\..*)(\d)(?=(?:\d{3})+(?:\.|$))/g, "$1 ");
 
-const removeSpaces = (num) => num.toString().replace(/\s/g, "");
+const removeSpaces = (num) => num?.toString()?.replace(/\s/g, "") ?? "";
 
 const math = (a, b, sign) =>
     sign === "+" ? a + b : sign === "-" ? a - b : (sign === "X" || sign === "*") ? a * b : a / b;
@@ -49,11 +48,9 @@ const Calculator = () => {
         if (removeSpaces(calc.num).length < 16) {
             setCalc({
                 ...calc,
-                num:
-                    removeSpaces(calc.num) % 1 === 0 && !calc.num.toString().includes(".")
-                        ? toLocaleString(Number(removeSpaces(calc.num + value)))
-                        : toLocaleString(calc.num + value),
-                res: !calc.sign ? 0 : calc.res,
+                num: toLocaleString(Number(removeSpaces((calc.num ?? "") + value))),
+                res: !calc.sign || calc.prevNum ? 0 : calc.res,
+                prevNum: null
             });
         }
     };
