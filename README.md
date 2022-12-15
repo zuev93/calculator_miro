@@ -36,6 +36,11 @@ The app is hosted on GitHub pages.
   This generates a static output inside [`build/`](./build), which you can host on a static hosting
   service.
 
+
+### How to deploy the app
+
+- Run `npm run deploy`.
+
 ### Folder structure
 
 <!-- The following tree structure is just an example -->
