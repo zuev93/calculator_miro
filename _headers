@@ -1,0 +1,6 @@
+/app.html
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Cache-Control: no-cache, no-store
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer-when-downgrade
+  Permissions-Policy:
