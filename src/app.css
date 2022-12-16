@@ -12,6 +12,15 @@ body {
 
 .footer {
     display: flex;
-    flex-direction: column;
     align-items: flex-end;
+}
+
+.footer a {
+    cursor: pointer;
+    display: inline-flex;
+    margin: 10px 0px 0px 10px;
+}
+
+.footer .links {
+    margin-right: auto;
 }
