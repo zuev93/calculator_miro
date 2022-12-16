@@ -4,7 +4,7 @@ import Calculator from "./calculator";
 
 ReactDOM.render(
     <StrictMode>
-        <div>
+        <div className="modes">
             <label className="radiobutton">
                 <input type="radio" name="mode" defaultChecked="defaultChecked"/>
                 <span>Basic</span>
@@ -18,7 +18,9 @@ ReactDOM.render(
                 <span>Programmer (Coming soon)</span>
             </label>
         </div>
-        <Calculator />
+        <div className="calculator">
+            <Calculator />
+        </div>
         <div className="footer">
             <span className="links">
                 <a className="icon icon-help-question" href="https://github.com/zuev93/calculator_miro" target="_blank"></a>

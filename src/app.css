@@ -5,14 +5,31 @@
     font-family: "Montserrat", sans-serif;
 }
 
-body {
+#root {
+    align-items: center;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.modes {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    height: 100%;
+    padding-left: 40px;
+}
+
+.calculator {
+    height: 100%;
 }
 
 .footer {
-    display: flex;
     align-items: flex-end;
+    display: flex;
+    height: 100%;
+    width: 100%;
 }
 
 .footer a {
