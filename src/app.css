@@ -5,13 +5,40 @@
     font-family: "Montserrat", sans-serif;
 }
 
-body {
+#root {
+    align-items: center;
+    box-sizing: border-box;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+}
+
+.modes {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    height: 100%;
+}
+
+.calculator {
+    height: 100%;
 }
 
 .footer {
-    display: flex;
-    flex-direction: column;
     align-items: flex-end;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.footer a {
+    cursor: pointer;
+    display: inline-flex;
+    margin: 10px 0px 0px 10px;
+}
+
+.footer .links {
+    margin-right: auto;
 }
