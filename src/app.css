@@ -18,18 +18,19 @@
 .modes {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     justify-content: center;
-    height: 100%;
 }
 
 .calculator {
-    height: 100%;
+    flex-grow: 2;
+    max-height: 540px;
 }
 
 .footer {
     align-items: flex-end;
     display: flex;
-    height: 100%;
+    flex-grow: 1;
     width: 100%;
 }
 

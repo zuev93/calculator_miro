@@ -55,7 +55,7 @@ const Calculator = () => {
             ...calc,
             sign: sign,
             res:  calc.res ? math(Number(calc.res), Number(calc.num), calc.sign) : (calc.num ?? calc.prevNum),
-            num: 0
+            num: null
         });
     };
 
