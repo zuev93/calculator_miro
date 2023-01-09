@@ -26,7 +26,7 @@ ReactDOM.render(
                 <a className="icon icon-help-question" href="https://github.com/zuev93/calculator_miro" target="_blank"></a>
                 <a className="icon icon-comment-feedback" href="https://github.com/zuev93/calculator_miro/issues" target="_blank"></a>
             </span>
-            <span>v0.1</span>
+            <span>v0.2</span>
         </div>
     </StrictMode>,
     document.getElementById("root")

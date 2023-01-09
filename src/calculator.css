@@ -1,6 +1,7 @@
 .wrapper {
     width: 320px;
-    height: 540px;
+    height: 100%;
+    max-height: 540px;
     padding: 10px;
     border-radius: 10px;
     background-color: var(--indigo600);
