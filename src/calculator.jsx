@@ -38,7 +38,8 @@ const Calculator = () => {
     let [calc, setCalc] = useState({
         sign: "",
         num: null,
-        res: 0,
+        prevNum: null,
+        res: null,
     });
 
     const processNum = (value) => {
@@ -54,8 +55,9 @@ const Calculator = () => {
         setCalc({
             ...calc,
             sign: sign,
-            res:  calc.res ? math(Number(calc.res), Number(calc.num), calc.sign) : (calc.num ?? calc.prevNum),
-            num: null
+            res:  calc.res && calc.num ? math(calc.res, calc.num, calc.sign) : (calc.res ?? calc.num),
+            num: null,
+            prevNum: calc.num
         });
     };
 
@@ -123,14 +125,15 @@ const Calculator = () => {
         setCalc({
             ...calc,
             sign: "",
-            num: 0,
-            res: 0,
+            num: null,
+            prevNum: null,
+            res: null,
         });
     };
 
     return (
         <div className="wrapper" onKeyDown={keyHandler} tabIndex="0">
-            <Screen value={calc.num ? calc.num : calc.res} />
+            <Screen value={calc.num ?? calc.res ?? "0"} />
             <div className="buttonBox">
                 {btnValues.flat().map((btn, i) => {
                     return (
