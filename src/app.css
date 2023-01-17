@@ -24,13 +24,17 @@
 
 .calculator {
     flex-grow: 2;
+    min-width: 150px;
     max-height: 540px;
+    max-width: 320px;
+    width: 100%;
 }
 
 .footer {
     align-items: flex-end;
     display: flex;
     flex-grow: 1;
+    min-height: 50px;
     width: 100%;
 }
 
